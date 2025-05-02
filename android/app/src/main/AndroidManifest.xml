@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+<!--Informado estas duas linhas de permissão -->
     <uses-permission android:name="androif.permission.NFC"/>
     <uses-feature android:name="andoid.hardware.nfc" andoid:Required="true"/>
 

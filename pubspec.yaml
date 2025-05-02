@@ -25,6 +25,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+#Adicionado nfc_manager e o provider
   cupertino_icons: ^1.0.8
   nfc_manager: ^3.5.0
   provider: any

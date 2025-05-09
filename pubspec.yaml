@@ -27,7 +27,7 @@ dependencies:
 
 #Adicionado nfc_manager e o provider
   cupertino_icons: ^1.0.8
-  nfc_manager: ^3.5.0
+  nfc_manager: ^3.4.0
   provider: any
 
 dev_dependencies:

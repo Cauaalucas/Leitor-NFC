@@ -11,7 +11,7 @@ class ReadWriteNFCScreen extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => NFCNotifier(),
       child: Scaffold(
-        appBar: AppBar(title: const Text("NFC READ/WRITE")),
+        appBar: AppBar(title: const Text("Leitura NFC")),
         body: Builder(
           builder: (BuildContext context) {
             return Center(
@@ -27,46 +27,7 @@ class ReadWriteNFCScreen extends StatelessWidget {
                         listen: false,
                       ).startNFCOperation(nfcOperation: NFCOperation.read);
                     },
-                    child: const Text("READ NFC"),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      scanningDialog(context);
-                      Provider.of<NFCNotifier>(
-                        context,
-                        listen: false,
-                      ).startNFCOperation(
-                        nfcOperation: NFCOperation.write,
-                        dataType: "URL",
-                      );
-                    },
-                    child: const Text("WRITE NFC URL"),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      scanningDialog(context);
-                      Provider.of<NFCNotifier>(
-                        context,
-                        listen: false,
-                      ).startNFCOperation(
-                        nfcOperation: NFCOperation.write,
-                        dataType: "MAIL",
-                      );
-                    },
-                    child: const Text("WRITE NFC EMAIL"),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      scanningDialog(context);
-                      Provider.of<NFCNotifier>(
-                        context,
-                        listen: false,
-                      ).startNFCOperation(
-                        nfcOperation: NFCOperation.write,
-                        dataType: "CONTACT",
-                      );
-                    },
-                    child: const Text("WRITE NFC CONTACT"),
+                    child: const Text("Ler NFC"),
                   ),
                   Consumer<NFCNotifier>(
                     builder: (context, provider, _) {

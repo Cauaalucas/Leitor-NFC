@@ -47,5 +47,8 @@
 	<true/>
 	<key>NFCEreaderUsageDescription</key>
 	<string>Para Testes</string>
+
+
+
 </dict>
 </plist>

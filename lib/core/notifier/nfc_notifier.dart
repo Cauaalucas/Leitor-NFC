@@ -24,9 +24,9 @@ class NFCNotifier extends ChangeNotifier {
 
       if (isAvail) {
         if (nfcOperation == NFCOperation.read) {
-          _message = "Scanning";
+          _message = "Lendo";
         } else if (nfcOperation == NFCOperation.write) {
-          _message = "Writing To Tag";
+          _message = "Escrevendo na Tag";
         }
 
         notifyListeners();
@@ -37,7 +37,7 @@ class NFCNotifier extends ChangeNotifier {
               _readFromTag(tag: nfcTag);
             } else if (nfcOperation == NFCOperation.write) {
               _writeToTag(nfcTag: nfcTag, dataType: dataType);
-              _message = "DONE";
+              _message = "Concluído";
             }
 
             _isProcessing = false;
@@ -52,7 +52,7 @@ class NFCNotifier extends ChangeNotifier {
         );
       } else {
         _isProcessing = false;
-        _message = "Please Enable NFC From Settings";
+        _message = "Ative o NFC nas Configurações";
         notifyListeners();
       }
     } catch (e) {
@@ -76,7 +76,7 @@ class NFCNotifier extends ChangeNotifier {
       decodedText = String.fromCharCodes(payload);
     }
 
-    _message = decodedText ?? "No Data Found";
+    _message = decodedText ?? "Nenhum dado encontrado";
   }
 
   Future<void> _writeToTag({

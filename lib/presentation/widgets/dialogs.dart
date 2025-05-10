@@ -6,13 +6,13 @@ void scanningDialog(BuildContext context) {
     barrierDismissible: false,
     builder: (BuildContext context) {
       return const AlertDialog(
-        title: Text('Scanning Tag'),
+        title: Text('Lendo Tag'),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             CircularProgressIndicator(),
             SizedBox(height: 16),
-            Text('Please wait...'),
+            Text('Por favor, aguarde...'),
           ],
         ),
       );
@@ -26,7 +26,7 @@ void showResultDialog(BuildContext context, String message) {
     barrierDismissible: false,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: const Text('Result'),
+        title: const Text('Resultado'),
         content: Text(message),
         actions: [
           ElevatedButton(
